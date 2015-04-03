@@ -172,8 +172,6 @@
             <button id="submit" type="submit" class="btn btn-primary">Contact us</button>
           </fieldset>
 
-          <iframe id="cm" src="cmform.html" width="0" height="0" hidden></iframe>
-
         </form>
       </div>
     </div>
@@ -199,7 +197,8 @@
   ga('send', 'pageview');
 
 </script>
-<script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+  <iframe id="cm" src="cmform.html" width="0" height="0" hidden></iframe>
   <script type="text/javascript">
     (function($, ga) {
       'use strict';
@@ -244,11 +243,10 @@
           $cm.find('#hidden-email').val($('#form-email').val());
           $cm.find('#hidden-phone').val($('#form-phone').val());
           $cm.find('#hidden-region').val($('#form-region').val());
-          // $cm.find('#hidden-org').val($('#form-org').val());
+
           $cm.find('#hidden-form').submit();
 
           $('#sec-form').slideUp(500, function () {
-            console.log("Sliding down", $('#sec-thanks'));
             $('#sec-thanks').slideDown(200);
           });
 
